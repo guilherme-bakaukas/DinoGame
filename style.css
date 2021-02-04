@@ -1,0 +1,78 @@
+
+body{
+    background: rgb(255, 255, 255);
+}
+
+.sun{
+    width: 80px;
+    height: 80px;
+
+}
+
+.cloud{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 10px;
+    left: 700px;
+}
+
+.caixao{
+    border: 3px solid black;;
+    position: relative;
+    top: 100px;
+    left: 500px;
+}
+
+.dino{
+    width: 90px;
+    height: 100px;
+    background-image: url(images/dino.png);
+    position: absolute;
+    bottom: 0;
+    /*definimos suas proporções e sua posição absoluta na porção inferior*/
+}
+
+.cactus{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url(images/cactus.png);
+    bottom: 0;
+}
+
+.fly_dino{
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    background-image: url(images/bird.png);
+    bottom: 80px;
+}
+
+.game-over{
+    text-align: center;
+    color: rgb(24, 22, 22);
+    margin-top: 70px;
+    font-family: Arial;
+}
+
+/* faz com que o cenario deslize*/
+@keyframes slideright{
+    from{
+        background-position: 70000%;
+    }
+    to{
+        background-position: 0;
+    }
+}
+
+.background{
+    position: absolute;
+    bottom: 0;
+    background-image: url(images/background.png);
+    background-repeat: repeat-x;
+    animation: slideright 600s infinite linear;
+    width: 100%;
+    height: 200px;
+}
